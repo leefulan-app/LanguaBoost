@@ -297,10 +297,10 @@
   </header>
 
   <div class="tabs">
-    <div class="tab active" data-panel="upload" onclick="showTab('upload')">新增今日內容</div>
+    <div class="tab active" data-panel="upload" onclick="showTab('upload')">新增內容</div>
     <div class="tab" data-panel="morning" onclick="showTab('morning')">早上・盲聽</div>
     <div class="tab" data-panel="evening" onclick="showTab('evening')">晚上・回譯</div>
-    <div class="tab" data-panel="review" onclick="showTab('review')">複習排程</div>
+    <div class="tab" data-panel="review" onclick="showTab('review')">複習</div>
   </div>
 
   <!-- UPLOAD -->
@@ -319,7 +319,7 @@
     <label>音檔連結</label>
     <input type="url" id="in-audio" placeholder="https://example.com/audio/0830.mp3">
 
-    <button class="btn" onclick="saveEntry()">儲存今日內容</button>
+    <button class="btn" onclick="saveEntry()">儲存</button>
     <div class="hint" id="upload-msg"></div>
   </div>
 
@@ -444,7 +444,7 @@ function escapeAttr(s){
 }
 
 const TIERS = [1,2,4,7,15,30,60]; // interval in "same-language sessions"
-const LANG_LABEL = {es:'西班牙文', pl:'波蘭語'};
+const LANG_LABEL = {es:'西班牙語', pl:'波蘭語'};
 let entries = [];
 let todayStr = new Date().toISOString().slice(0,10);
 let selectedDate = todayStr;
